@@ -19,7 +19,11 @@ public class Selenium {
 	private static WebDriver driver = null;
 	
 	
-	
+	/**
+	 * Verifica qual o browser escolhido no arquivo de propriedades
+	 * inicializa o driver apropriado e o retorna
+	 * @return retorna instância do WebDriver
+	 */
 	public static WebDriver getDriver() {
 		String browser = Property.BROWSER_NAME;
 		if (driver == null) {

@@ -20,7 +20,6 @@ public abstract class Property {
 	private static final String PROPERTIES_FILE = "br/org/cesar/config.properties";
 	
 	static{
-		PHANTOMJS_DRIVE_PATH = new File("").getAbsolutePath() + "\\src\\main\\resources\\phantomjs.exe";
 		CHROME_DRIVE_PATH = new File("").getAbsolutePath() + "\\src\\main\\resources\\chromedriver.exe";
 		IE64_DRIVE_PATH = new File("").getAbsolutePath() + "\\src\\main\\resources\\IEDriverServer.exe";
 		FIREFOX_DRIVE_PATH = new File("").getAbsolutePath() + "%PROGRAMFILES%\\Mozilla Firefox\\firefox.exe";

@@ -61,11 +61,11 @@ public class HomePageValidation extends BaseTestcase{
 	
 	
 	/**
-	 * Objective: Search results screen is properly displayed
+	 * Objetivo: Página de resultados da busca é exibida corretamente
 	 * 
-	 * Steps: Performs a search with fixed text and assert displayed title text
+	 * Passos: Realiza busca com texto fixo e verifica o título da página de resultados
 	 * 
-	 * Expected Results: Search results Page title is correct
+	 * Resultado Esperado: Título da página de resultados está correto
 	 */
 	@Test
 	public void performSimpleSearch() {

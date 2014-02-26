@@ -141,5 +141,5 @@ public class HomePage {
 	public static void isSearchResultCorrect(String expectedTitle){
 		assertThat("Título Incorreto",  driver.findElement(searchResultsTitle).getText(), is(expectedTitle)); 
 	}
-
+	
 }
