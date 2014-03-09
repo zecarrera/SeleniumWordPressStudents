@@ -71,6 +71,7 @@ public class HomePage {
 	 * Clicar no link SELENIUM do menu
 	 */
 	public static void clickSeleniumMenuItem(){
+//		wait.until(ExpectedConditions.elementToBeClickable(seleniumMenuItem));
 		Utils.isClickable(seleniumMenuItem);
 		driver.findElement(seleniumMenuItem).click();
 	}	

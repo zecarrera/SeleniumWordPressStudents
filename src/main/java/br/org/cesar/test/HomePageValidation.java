@@ -1,10 +1,13 @@
 package br.org.cesar.test;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.TimeoutException;
 
 import br.org.cesar.common.HomePage;
+import br.org.cesar.util.Utils;
 
 /**
  * Classe de testes com cenários relacionados a página inicial
@@ -12,8 +15,9 @@ import br.org.cesar.common.HomePage;
 public class HomePageValidation extends BaseTestcase{
 
 	@Before
-	public void before() throws Exception {
+	public void before() throws Exception {  
 	}
+
 
 
 	/**
@@ -25,10 +29,10 @@ public class HomePageValidation extends BaseTestcase{
 	 */
 	@Test
 	public void assertHomeScreenTitle() {
-		HomePage.clickHomeMenuItem();
-		HomePage.isTitleCorrect("Classe de Testes | Testes e Qualidade de Software");
+			HomePage.clickHomeMenuItem();
+			HomePage.isTitleCorrect("Classe de Testes | Testes e Qualidade de Software");
 	}
-	
+
 	
 	/**
 	 * Objective: Navigates to Curso Selenium Page and verify displayed title
