@@ -13,7 +13,6 @@ public abstract class Property {
 	public static String CHROME_DRIVE_PATH;
 	public static String IE64_DRIVE_PATH;
 	public static String FIREFOX_DRIVE_PATH;
-	public static String PHANTOMJS_DRIVE_PATH;
 	public static final String BROWSER_NAME;
 	public static final String SITE_ADDRESS;
 	
