@@ -21,11 +21,11 @@ public class HomePageValidation extends BaseTestcase{
 
 
 	/**
-	 * Objective: Open home screen and verify title
+	 * Objetivo: Abrir a home screen e verificar o titulo
 	 * 
-	 * Steps: Navigate to home screen and assert title text
+	 * Passos: Navegar para a home screen e verificar o titulo
 	 * 
-	 * Expected Results: Home screen title is correct
+	 * Resultado Esperado: Titulo da home screen está correto
 	 */
 	@Test
 	public void assertHomeScreenTitle() {
@@ -35,11 +35,11 @@ public class HomePageValidation extends BaseTestcase{
 
 	
 	/**
-	 * Objective: Navigates to Curso Selenium Page and verify displayed title
+	 * Objetivo: Navegar para a pagina Curso Selenium e verificar o titulo exibido
 	 * 
-	 * Steps: Navigate to  Curso Selenium Page and assert displayed title text
+	 * Passos: Navegar para a pagina Curso Selenium, em seguida verificar o titulo exibido
 	 * 
-	 * Expected Results: Curso Selenium Page  title is correct
+	 * Resultado Esperado:Titulo da página está correto
 	 */
 	@Test
 	public void navigateToCursoSeleniumPage() {
@@ -50,11 +50,11 @@ public class HomePageValidation extends BaseTestcase{
 	
 	
 	/**
-	 * Objective: Navigates to Formulario Simples Pageand verify displayed title
+	 * Objetivo: Navegar para a pagina Formulario Simples e verificar o titulo
 	 * 
-	 * Steps: Navigate to  Formulario Simples Page and assert displayed title text
+	 * Passos: Navegar para a pagina Formulario Simples e verificar o titulo exibido
 	 * 
-	 * Expected Results: Formulario Simples Page title is correct
+	 * Resultado Esperado:Titulo da página está correto
 	 */
 	@Test
 	public void navigateToFormularioSimplesPage() {

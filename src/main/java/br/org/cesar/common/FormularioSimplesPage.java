@@ -47,7 +47,7 @@ public class FormularioSimplesPage {
 	
 	
 	/**
-	 * Fills out Nome field
+	 * Preenche o campo nome
 	 */
 	public static void fillOutNome(String nome){
 		driver.findElement(nameField).clear();
@@ -55,7 +55,7 @@ public class FormularioSimplesPage {
 	}
 	
 	/**
-	 * Fills out Email field
+	 * Preenche o campo email
 	 */
 	public static void fillOutEmail(String email){
 		driver.findElement(emailField).clear();
@@ -63,7 +63,7 @@ public class FormularioSimplesPage {
 	}
 	
 	/**
-	 * Fills out Website field
+	 * Preenche o campo website
 	 */
 	public static void fillOutWebsite(String assunto){
 		driver.findElement(websiteField).clear();
@@ -71,7 +71,7 @@ public class FormularioSimplesPage {
 	}
 	
 	/**
-	 * Fills out Comentario field
+	 * Preenche o campo comentario
 	 */
 	public static void fillOutComentario(String mensagem){
 		driver.findElement(comentarioField).clear();
@@ -79,13 +79,13 @@ public class FormularioSimplesPage {
 	}
 	
 	/**
-	 * Click enviar button for formulario simples form
+	 * Clica no botão enviar do formulario simples
 	 */
 	public static void clickEnviarButton(){
 		driver.findElement(enviarButtonLocator).click();
 	}
 	/**
-	 * Fills out formulario simples
+	 * Preenche o formulario simples com todas as informacoes
 	 */
 	public static void fillOutFormularioSimples(String nome, String email, String website, String comentario){
 		fillOutNome(nome);
@@ -97,7 +97,7 @@ public class FormularioSimplesPage {
 	
 	
 	/**
-	 * Asserts if success message is shown on formulario simples page
+	 * Verifica se a mensagem de sucesso é exibida no formulario simples
 	 */
 	public static void assertSuccessMessageIsShown(){
 		Utils.isVisible(tituloMensagemFormularioSimples);
@@ -105,7 +105,7 @@ public class FormularioSimplesPage {
 	}
 	
 	/**
-	 * Asserts if error message is shown on formulario simples page
+	 * Verifica se a mensagem de erro é exibida no formulario simples
 	 */
 	public static void assertErrorMessageIsShown() {
 		Utils.isVisible(tituloMensagemFormularioSimples);
@@ -113,8 +113,9 @@ public class FormularioSimplesPage {
 	}
 
 	/**
-	 * Asserts if the detailed error message after submitting formularios simples is correct
-	 * Checks the first detailed message displayed
+	 * Verifica se a mensagem de erro detalhada
+	 * é exibida após submeter o formulario
+	 * Verifica a primeira mensagem detalhada exibida
 	 */
 	public static void assertDetailedErrorMessageIsShown(String errorMessage){
 		Utils.isVisible(mensagemDetalhadaFormularioSimples);

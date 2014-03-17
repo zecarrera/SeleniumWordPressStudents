@@ -10,7 +10,11 @@ import br.org.cesar.common.Property;
 import br.org.cesar.common.Selenium;
 import br.org.cesar.test.FormularioSimplesPageValidation;
 import br.org.cesar.test.HomePageValidation;
-
+/**
+ * Classe que agrupa todas as classes de teste, funcionando com uma suíte de regressão.
+ * @author jcan
+ *
+ */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({ 
 	HomePageValidation.class,
