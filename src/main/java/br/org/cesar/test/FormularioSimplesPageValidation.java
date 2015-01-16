@@ -7,25 +7,25 @@ import br.org.cesar.common.FormularioSimplesPage;
 import br.org.cesar.common.HomePage;
 
 /**
- * Classe de testes com cenários relacionados a página inicial
+ * Classe de testes com cenï¿½rios relacionados a pï¿½gina inicial
  */
 public class FormularioSimplesPageValidation extends BaseTestcase{
 
 	/**
-	 * Antes de cada teste acessa a página de formulário simples
+	 * Antes de cada teste acessa a pï¿½gina de formulï¿½rio simples
 	 * @throws Exception
 	 */
 	@Before
 	public void before() throws Exception {
 		HomePage.clickSeleniumMenuItem();
-		HomePage.clicksubMenuItem("Formulário Simples");
+		HomePage.clicksubMenuItem("FormulÃ¡rio Simples");
 	}
 
 
 	/**
 	 * Objetivo: Enviar um comentario com sucesso
 	 * 
-	 * Passos: Preencher campos do formulario com informações validas e submeter
+	 * Passos: Preencher campos do formulario com informaï¿½ï¿½es validas e submeter
 	 * 
 	 * Resultado Esperado: Mensagem de sucesso exibida
 	 */
@@ -40,13 +40,13 @@ public class FormularioSimplesPageValidation extends BaseTestcase{
 	 * 
 	 * Passos: Preencher campos do formulario (sem informar o nome) e submeter
 	 * 
-	 * Resultado Esperado: Mensagem de erro é exibida
+	 * Resultado Esperado: Mensagem de erro ï¿½ exibida
 	 */
 	@Test
 	public void sendCommentWithoutName() {
 		FormularioSimplesPage.fillOutFormularioSimples("", "zecarrera@gmail.com", "website", "mensagem");
 		FormularioSimplesPage.assertErrorMessageIsShown();
-		FormularioSimplesPage.assertDetailedErrorMessageIsShown("Nome é obrigatório");
+		FormularioSimplesPage.assertDetailedErrorMessageIsShown("Nome Ã© obrigatÃ³rio");
 	}
 	
 	

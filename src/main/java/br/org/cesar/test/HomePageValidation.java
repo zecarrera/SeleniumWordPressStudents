@@ -1,16 +1,12 @@
 package br.org.cesar.test;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.openqa.selenium.TimeoutException;
+import org.junit.*;
 
 import br.org.cesar.common.HomePage;
-import br.org.cesar.util.Utils;
+
 
 /**
- * Classe de testes com cenários relacionados a página inicial
+ * Classe de testes com cenï¿½rios relacionados a pï¿½gina inicial
  */
 public class HomePageValidation extends BaseTestcase{
 
@@ -25,7 +21,7 @@ public class HomePageValidation extends BaseTestcase{
 	 * 
 	 * Passos: Navegar para a home screen e verificar o titulo
 	 * 
-	 * Resultado Esperado: Titulo da home screen está correto
+	 * Resultado Esperado: Titulo da home screen estï¿½ correto
 	 */
 	@Test
 	public void assertHomeScreenTitle() {
@@ -39,7 +35,7 @@ public class HomePageValidation extends BaseTestcase{
 	 * 
 	 * Passos: Navegar para a pagina Curso Selenium, em seguida verificar o titulo exibido
 	 * 
-	 * Resultado Esperado:Titulo da página está correto
+	 * Resultado Esperado:Titulo da pï¿½gina estï¿½ correto
 	 */
 	@Test
 	public void navigateToCursoSeleniumPage() {
@@ -54,22 +50,22 @@ public class HomePageValidation extends BaseTestcase{
 	 * 
 	 * Passos: Navegar para a pagina Formulario Simples e verificar o titulo exibido
 	 * 
-	 * Resultado Esperado:Titulo da página está correto
+	 * Resultado Esperado:Titulo da pï¿½gina estï¿½ correto
 	 */
 	@Test
 	public void navigateToFormularioSimplesPage() {
 		HomePage.clickSeleniumMenuItem();
-		HomePage.clicksubMenuItem("Formulário Simples");
-		HomePage.isHeaderTitleCorrect("Formulário Simples");
+		HomePage.clicksubMenuItem("Formulï¿½rio Simples");
+		HomePage.isHeaderTitleCorrect("Formulï¿½rio Simples");
 	}
 	
 	
 	/**
-	 * Objetivo: Página de resultados da busca é exibida corretamente
+	 * Objetivo: Pï¿½gina de resultados da busca ï¿½ exibida corretamente
 	 * 
-	 * Passos: Realiza busca com texto fixo e verifica o título da página de resultados
+	 * Passos: Realiza busca com texto fixo e verifica o tï¿½tulo da pï¿½gina de resultados
 	 * 
-	 * Resultado Esperado: Título da página de resultados está correto
+	 * Resultado Esperado: Tï¿½tulo da pï¿½gina de resultados estï¿½ correto
 	 */
 	@Test
 	public void performSimpleSearch() {
