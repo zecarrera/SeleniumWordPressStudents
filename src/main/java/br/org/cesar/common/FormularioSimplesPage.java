@@ -37,7 +37,7 @@ public class FormularioSimplesPage {
 	static By emailField = By.id("g9-email");
 	static By websiteField = By.id("g9-website");
 	static By comentarioField = By.name("g9-comentrio");
-	static By enviarButtonLocator = By.xpath("//input[@value='Enviar »']");
+	static By enviarButtonLocator = By.xpath("//input[@value='Enviar Â»']");
 	static By tituloMensagemFormularioSimples = By.cssSelector("h3");
 	static By mensagemDetalhadaFormularioSimples = By.cssSelector("li.form-error-message");
 
@@ -79,7 +79,7 @@ public class FormularioSimplesPage {
 	}
 	
 	/**
-	 * Clica no botão enviar do formulario simples
+	 * Clica no botï¿½o enviar do formulario simples
 	 */
 	public static void clickEnviarButton(){
 		driver.findElement(enviarButtonLocator).click();
@@ -97,29 +97,29 @@ public class FormularioSimplesPage {
 	
 	
 	/**
-	 * Verifica se a mensagem de sucesso é exibida no formulario simples
+	 * Verifica se a mensagem de sucesso ï¿½ exibida no formulario simples
 	 */
 	public static void assertSuccessMessageIsShown(){
 		Utils.isVisible(tituloMensagemFormularioSimples);
-		assertThat("Mensagem de Sucesso não está correta",  driver.findElement(tituloMensagemFormularioSimples).getText(), is("A mensagem foi enviada (voltar)")); 
+		assertThat("Mensagem de Sucesso nÃ£o estÃ¡ correta",  driver.findElement(tituloMensagemFormularioSimples).getText(), is("A mensagem foi enviada (voltar)"));
 	}
 	
 	/**
-	 * Verifica se a mensagem de erro é exibida no formulario simples
+	 * Verifica se a mensagem de erro ï¿½ exibida no formulario simples
 	 */
 	public static void assertErrorMessageIsShown() {
 		Utils.isVisible(tituloMensagemFormularioSimples);
-		assertThat("Mensagem de Erro não está correta", driver.findElement(tituloMensagemFormularioSimples).getText(), is("Erro!"));
+		assertThat("Mensagem de Erro nÃ£o estÃ¡ correta", driver.findElement(tituloMensagemFormularioSimples).getText(), is("Erro!"));
 	}
 
 	/**
 	 * Verifica se a mensagem de erro detalhada
-	 * é exibida após submeter o formulario
+	 * ï¿½ exibida apï¿½s submeter o formulario
 	 * Verifica a primeira mensagem detalhada exibida
 	 */
 	public static void assertDetailedErrorMessageIsShown(String errorMessage){
 		Utils.isVisible(mensagemDetalhadaFormularioSimples);
-		assertThat("Mensagem detalhada está errada", driver.findElement(mensagemDetalhadaFormularioSimples).getText(), is(errorMessage));
+		assertThat("Mensagem detalhada estÃ¡ errada", driver.findElement(mensagemDetalhadaFormularioSimples).getText(), is(errorMessage));
 	}
 	
 }

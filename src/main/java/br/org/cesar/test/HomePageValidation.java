@@ -55,8 +55,8 @@ public class HomePageValidation extends BaseTestcase{
 	@Test
 	public void navigateToFormularioSimplesPage() {
 		HomePage.clickSeleniumMenuItem();
-		HomePage.clicksubMenuItem("Formul�rio Simples");
-		HomePage.isHeaderTitleCorrect("Formul�rio Simples");
+		HomePage.clicksubMenuItem("Formulário Simples");
+		HomePage.isHeaderTitleCorrect("Formulário Simples");
 	}
 	
 	

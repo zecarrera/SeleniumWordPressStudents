@@ -31,7 +31,7 @@ public class FormularioSimplesPageValidation extends BaseTestcase{
 	 */
 	@Test
 	public void sendCommentSuccessfully() {
-		FormularioSimplesPage.fillOutFormularioSimples("jose", "zecarrera@gmail.com", "website", "mensagem");
+		FormularioSimplesPage.fillOutFormularioSimples("jose", "teste@gmail.com", "website", "mensagem");
 		FormularioSimplesPage.assertSuccessMessageIsShown();
 	}
 	
@@ -44,7 +44,7 @@ public class FormularioSimplesPageValidation extends BaseTestcase{
 	 */
 	@Test
 	public void sendCommentWithoutName() {
-		FormularioSimplesPage.fillOutFormularioSimples("", "zecarrera@gmail.com", "website", "mensagem");
+		FormularioSimplesPage.fillOutFormularioSimples("", "teste@gmail.com", "website", "mensagem");
 		FormularioSimplesPage.assertErrorMessageIsShown();
 		FormularioSimplesPage.assertDetailedErrorMessageIsShown("Nome é obrigatório");
 	}

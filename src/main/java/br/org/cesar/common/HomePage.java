@@ -15,7 +15,7 @@ import br.org.cesar.util.Utils;
 
 
 /**
- * P·gina que disponibiliza os serviÁos (aÁıes) presentes na home page do CLASSEDETESTES.WORDPRESS.COM
+ * PÔøΩgina que disponibiliza os serviÔøΩos (aÔøΩÔøΩes) presentes na home page do CLASSEDETESTES.WORDPRESS.COM
  * @author jcan
  *
  */
@@ -36,13 +36,13 @@ public class HomePage {
 	}
 	
 	/**
-	 * DefiniÁ„o ˙nica dos locators utilizados na p·gina
+	 * DefiniÔøΩÔøΩo ÔøΩnica dos locators utilizados na pÔøΩgina
 	 */
 //	static By homeMenuItem = By.id("menu-item-103"); //O item de menu pode ser acessado por id ou pelo texto exibido no link
 	static By homeMenuItem = By.linkText("HOME");
 	static By seleniumMenuItem = By.linkText("SELENIUM");
 	static By cursoSeleniumSubMenuItem = By.linkText("CURSO SELENIUM");
-	static By formularioSimplesMenuItem = By.linkText("FORMUL¡RIO SIMPLES");
+	static By formularioSimplesMenuItem = By.linkText("FORMUL√ÅRIO SIMPLES");
 
 	
 	static By hiddenOptionsButton = By.cssSelector("a.widget-handle.genericon");
@@ -83,7 +83,7 @@ public class HomePage {
 		By correctLocator = null;
 		if (subMenu.equalsIgnoreCase("Curso Selenium")){
 			correctLocator = cursoSeleniumSubMenuItem;
-		} else if (subMenu.equalsIgnoreCase("Formul·rio Simples")){
+		} else if (subMenu.equalsIgnoreCase("Formul√°rio Simples")){
 			correctLocator = formularioSimplesMenuItem;
 		}
 		Utils.isVisible(correctLocator);
@@ -115,21 +115,21 @@ public class HomePage {
 	}
 
 	/**
-	 * Verifica se o titulo da p·gina (exibido no navegador) È o esperado
+	 * Verifica se o titulo da pÔøΩgina (exibido no navegador) ÔøΩ o esperado
 	 */
 	public static void isHeaderTitleCorrect(String expectedTitle){
-		assertThat("TÌtulo da p·gina Incorreto", driver.findElement(pageHeaderTitle).getText(), is(expectedTitle)); 
+		assertThat("T√≠tulo da p√°gina Incorreto", driver.findElement(pageHeaderTitle).getText(), is(expectedTitle));
 	}
 	
 	
 	/**
-	 * Verifica se o tÌtulo exibido na p·gina possui o valor esperado
+	 * Verifica se o tÔøΩtulo exibido na pÔøΩgina possui o valor esperado
 	 */
 	public static void isTitleCorrect(String expectedTitle){
-		assertThat("TÌtulo Incorreto", driver.getTitle(), is(expectedTitle)); 
+		assertThat("T√≠tulo Incorreto", driver.getTitle(), is(expectedTitle));
 		 // em caso de falha:
 	     // messagem de erro:
-	     // TÌtulo Incorreto
+	     // TÔøΩtulo Incorreto
 	     // valor esperado: expectedTitle
 	     // valor capturado: driver.getTitle()
 
@@ -137,10 +137,10 @@ public class HomePage {
 	}
 	
 	/**
-	 * Verifica se o tÌtulo da p·gina de resultados de busca est· correto
+	 * Verifica se o tÔøΩtulo da pÔøΩgina de resultados de busca estÔøΩ correto
 	 */
 	public static void isSearchResultCorrect(String expectedTitle){
-		assertThat("TÌtulo Incorreto",  driver.findElement(searchResultsTitle).getText(), is(expectedTitle)); 
+		assertThat("T√≠tulo Incorreto",  driver.findElement(searchResultsTitle).getText(), is(expectedTitle));
 	}
 	
 }
