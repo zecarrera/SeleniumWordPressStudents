@@ -4,6 +4,7 @@ import java.io.File;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -30,6 +31,8 @@ public class Selenium {
 			if (Browser.CHROME.equals(browser)) {
 				File file = new File(Property.CHROME_DRIVE_PATH);
 				System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("start-maximized");
 				driver = new ChromeDriver();
 			} else if (Browser.IE.equals(browser)) {
 				DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();

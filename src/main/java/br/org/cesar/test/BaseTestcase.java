@@ -12,6 +12,7 @@ import br.org.cesar.common.HomePage;
 import br.org.cesar.common.Property;
 import br.org.cesar.common.Selenium;
 import br.org.cesar.test.suite.AllTests;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 /**
  * Classe base de testes, que inicializa o driver no início dos testes e encerra o driver ao final da execução.
@@ -27,7 +28,9 @@ public class BaseTestcase {
 		if (!AllTests.isAllTestsExecution){
 			driver = Selenium.getDriver();
 			driver.navigate().to(Property.SITE_ADDRESS);
-			driver.manage().window().maximize();
+			if (!(driver instanceof ChromeDriver)){
+				driver.manage().window().maximize();
+			}
 		}
 	}
 	
