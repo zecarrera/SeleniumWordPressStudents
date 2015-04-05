@@ -12,10 +12,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.org.cesar.util.Utils;
 
+import java.util.concurrent.TimeUnit;
 
 
 /**
- * P�gina que disponibiliza os servi�os (a��es) presentes na home page do CLASSEDETESTES.WORDPRESS.COM
+ * Pagina que disponibiliza os serviços (ações) presentes na home page do CLASSEDETESTES.WORDPRESS.COM
  * @author jcan
  *
  */
@@ -32,13 +33,13 @@ public class HomePage {
 	 */
 	static {
 		driver = Selenium.getDriver();
-		wait = new WebDriverWait(driver, 10);
+		wait = new WebDriverWait(driver, 5);
 	}
 	
 	/**
-	 * Defini��o �nica dos locators utilizados na p�gina
+	 * Definição única dos locators utilizados na pagina
 	 */
-//	static By homeMenuItem = By.id("menu-item-103"); //O item de menu pode ser acessado por id ou pelo texto exibido no link
+//  static By homeMenuItem = By.id("menu-item-103"); //O item de menu pode ser acessado por id ou pelo texto exibido no link
 	static By homeMenuItem = By.linkText("HOME");
 	static By seleniumMenuItem = By.linkText("SELENIUM");
 	static By cursoSeleniumSubMenuItem = By.linkText("CURSO SELENIUM");
@@ -71,8 +72,9 @@ public class HomePage {
 	 * Clicar no link SELENIUM do menu
 	 */
 	public static void clickSeleniumMenuItem(){
-//		wait.until(ExpectedConditions.elementToBeClickable(seleniumMenuItem));
-		Utils.isClickable(seleniumMenuItem);
+		//wait.until(ExpectedConditions.elementToBeClickable(seleniumMenuItem));
+//		Utils.isClickable(seleniumMenuItem);
+		driver.manage().timeouts().implicitlyWait(13, TimeUnit.SECONDS);
 		driver.findElement(seleniumMenuItem).click();
 	}	
 	
@@ -115,7 +117,7 @@ public class HomePage {
 	}
 
 	/**
-	 * Verifica se o titulo da p�gina (exibido no navegador) � o esperado
+	 * Verifica se o titulo da pagina (exibido no navegador) é o esperado
 	 */
 	public static void isHeaderTitleCorrect(String expectedTitle){
 		assertThat("Título da página Incorreto", driver.findElement(pageHeaderTitle).getText(), is(expectedTitle));
@@ -123,13 +125,13 @@ public class HomePage {
 	
 	
 	/**
-	 * Verifica se o t�tulo exibido na p�gina possui o valor esperado
+	 * Verifica se o titulo exibido na pagina possui o valor esperado
 	 */
 	public static void isTitleCorrect(String expectedTitle){
 		assertThat("Título Incorreto", driver.getTitle(), is(expectedTitle));
 		 // em caso de falha:
 	     // messagem de erro:
-	     // T�tulo Incorreto
+	     // Titulo Incorreto
 	     // valor esperado: expectedTitle
 	     // valor capturado: driver.getTitle()
 
@@ -137,10 +139,11 @@ public class HomePage {
 	}
 	
 	/**
-	 * Verifica se o t�tulo da p�gina de resultados de busca est� correto
+	 * Verifica se o titulo da pagina de resultados de busca está correto
 	 */
 	public static void isSearchResultCorrect(String expectedTitle){
-		assertThat("Título Incorreto",  driver.findElement(searchResultsTitle).getText(), is(expectedTitle));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(searchResultsTitle));
+		assertThat("Título Incorreto", driver.findElement(searchResultsTitle).getText(), is(expectedTitle));
 	}
 	
 }

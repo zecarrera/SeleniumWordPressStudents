@@ -31,9 +31,9 @@ public class BaseTestcase {
 			if (!(driver instanceof ChromeDriver)){
 				driver.manage().window().maximize();
 			}
+			}
 		}
-	}
-	
+
 	@AfterClass
 	public static void afterClass() throws Exception {
 		if (!AllTests.isAllTestsExecution){
