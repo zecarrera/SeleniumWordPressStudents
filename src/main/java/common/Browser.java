@@ -1,7 +1,7 @@
-package br.org.cesar.common;
+package common;
 
 /**
- * Classe para definir vari·vel para identifiÁ„o dos browsers
+ * Classe para definir vari√°vel para identifi√ß√£o dos browsers
  */
 public class Browser {
 

@@ -1,4 +1,4 @@
-package br.org.cesar.common;
+package common;
 
 
 import static org.junit.Assert.*;
@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import br.org.cesar.util.Utils;
+import util.Utils;
 
 import java.util.concurrent.TimeUnit;
 
@@ -117,7 +117,7 @@ public class HomePage {
 	}
 
 	/**
-	 * Verifica se o titulo da pagina (exibido no navegador) é o esperado
+	 * Verifica se o titulo da pagina (exibido no navegador) e o esperado
 	 */
 	public static void isHeaderTitleCorrect(String expectedTitle){
 		assertThat("Título da página Incorreto", driver.findElement(pageHeaderTitle).getText(), is(expectedTitle));
@@ -143,7 +143,7 @@ public class HomePage {
 	 */
 	public static void isSearchResultCorrect(String expectedTitle){
 		wait.until(ExpectedConditions.visibilityOfElementLocated(searchResultsTitle));
-		assertThat("Título Incorreto", driver.findElement(searchResultsTitle).getText(), is(expectedTitle));
+		assertThat("TÃ­tulo Incorreto", driver.findElement(searchResultsTitle).getText(), is(expectedTitle));
 	}
 	
 }

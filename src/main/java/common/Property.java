@@ -1,4 +1,4 @@
-package br.org.cesar.common;
+package common;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.util.Properties;
 /**
 * @author jcan
 * Define o caminho do driver dos diferentes browsers
-* Acessa as configurações definidas no config.properties e retorna a informação 
+* Acessa as configuraÃ§Ãµes definidas no config.properties e retorna a informaÃ§Ã£o 
 */
 public abstract class Property {
 
@@ -16,11 +16,11 @@ public abstract class Property {
 	public static final String BROWSER_NAME;
 	public static final String SITE_ADDRESS;
 	
-	private static final String PROPERTIES_FILE = "br/org/cesar/config.properties";
+	private static final String PROPERTIES_FILE = "config.properties";
 	
 	static{
-		CHROME_DRIVE_PATH = new File("").getAbsolutePath() + "\\src\\main\\resources\\chromedriver.exe";
-		IE64_DRIVE_PATH = new File("").getAbsolutePath() + "\\src\\main\\resources\\IEDriverServer.exe";
+		CHROME_DRIVE_PATH = new File("").getAbsolutePath() + "\\src\\main\\resources\\drivers\\chromedriver.exe";
+		IE64_DRIVE_PATH = new File("").getAbsolutePath() + "\\src\\main\\resources\\drivers\\IEDriverServer.exe";
 		FIREFOX_DRIVE_PATH = new File("").getAbsolutePath() + "%PROGRAMFILES%\\Mozilla Firefox\\firefox.exe";
 		BROWSER_NAME = get("browser.name");
 		SITE_ADDRESS = get("site.address");

@@ -1,4 +1,4 @@
-package br.org.cesar.common;
+package common;
 
 import java.io.File;
 
@@ -23,7 +23,7 @@ public class Selenium {
 	/**
 	 * Verifica qual o browser escolhido no arquivo de propriedades
 	 * inicializa o driver apropriado e o retorna
-	 * @return retorna inst‚ncia do WebDriver
+	 * @return retorna inst√¢ncia do WebDriver
 	 */
 	public static WebDriver getDriver() {
 		String browser = Property.BROWSER_NAME;

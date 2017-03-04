@@ -1,4 +1,4 @@
-package br.org.cesar.test.suite;
+package test.suite;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -6,12 +6,12 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.openqa.selenium.WebDriver;
 
-import br.org.cesar.common.Property;
-import br.org.cesar.common.Selenium;
-import br.org.cesar.test.FormularioSimplesPageValidation;
-import br.org.cesar.test.HomePageValidation;
+import common.Property;
+import common.Selenium;
+import test.FormularioSimplesPageValidation;
+import test.HomePageValidation;
 /**
- * Classe que agrupa todas as classes de teste, funcionando com uma suÌte de regress„o.
+ * Classe que agrupa todas as classes de teste, funcionando com uma su√≠te de regress√£o.
  * @author jcan
  *
  */

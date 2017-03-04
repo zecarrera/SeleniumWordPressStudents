@@ -1,9 +1,9 @@
-package br.org.cesar.test;
+package test;
 
-import br.org.cesar.util.Utils;
+import common.HomePage;
+import util.Utils;
+
 import org.junit.*;
-
-import br.org.cesar.common.HomePage;
 import org.openqa.selenium.Dimension;
 
 
@@ -14,9 +14,8 @@ public class HomePageValidation extends BaseTestcase{
 
 	@Before
 	public void before() throws Exception {
+		
 	}
-
-
 
 	/**
 	 * Objetivo: Abrir a home screen e verificar o titulo

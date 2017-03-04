@@ -1,4 +1,4 @@
-package br.org.cesar.common;
+package common;
 
 
 import static org.hamcrest.CoreMatchers.is;
@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import br.org.cesar.util.Utils;
+import util.Utils;
 
 
 
@@ -97,7 +97,7 @@ public class FormularioSimplesPage {
 	
 	
 	/**
-	 * Verifica se a mensagem de sucesso � exibida no formulario simples
+	 * Verifica se a mensagem de sucesso é exibida no formulario simples
 	 */
 	public static void assertSuccessMessageIsShown(){
 		Utils.isVisible(tituloMensagemFormularioSimples);
@@ -105,7 +105,7 @@ public class FormularioSimplesPage {
 	}
 	
 	/**
-	 * Verifica se a mensagem de erro � exibida no formulario simples
+	 * Verifica se a mensagem de erro é exibida no formulario simples
 	 */
 	public static void assertErrorMessageIsShown() {
 		Utils.isVisible(tituloMensagemFormularioSimples);
@@ -114,7 +114,7 @@ public class FormularioSimplesPage {
 
 	/**
 	 * Verifica se a mensagem de erro detalhada
-	 * � exibida ap�s submeter o formulario
+	 * � exibida após submeter o formulario
 	 * Verifica a primeira mensagem detalhada exibida
 	 */
 	public static void assertDetailedErrorMessageIsShown(String errorMessage){

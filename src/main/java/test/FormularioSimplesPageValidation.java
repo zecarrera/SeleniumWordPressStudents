@@ -1,18 +1,18 @@
-package br.org.cesar.test;
+package test;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import br.org.cesar.common.FormularioSimplesPage;
-import br.org.cesar.common.HomePage;
+import common.FormularioSimplesPage;
+import common.HomePage;
 
 /**
- * Classe de testes com cen�rios relacionados a p�gina inicial
+ * Classe de testes com cenários relacionados a página inicial
  */
 public class FormularioSimplesPageValidation extends BaseTestcase{
 
 	/**
-	 * Antes de cada teste acessa a p�gina de formul�rio simples
+	 * Antes de cada teste acessa a página de formulário simples
 	 * @throws Exception
 	 */
 	@Before
@@ -21,11 +21,10 @@ public class FormularioSimplesPageValidation extends BaseTestcase{
 		HomePage.clicksubMenuItem("Formulário Simples");
 	}
 
-
 	/**
 	 * Objetivo: Enviar um comentario com sucesso
 	 * 
-	 * Passos: Preencher campos do formulario com informa��es validas e submeter
+	 * Passos: Preencher campos do formulario com informações validas e submeter
 	 * 
 	 * Resultado Esperado: Mensagem de sucesso exibida
 	 */

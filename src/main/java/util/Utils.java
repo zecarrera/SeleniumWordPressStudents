@@ -1,4 +1,4 @@
-package br.org.cesar.util;
+package util;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,10 +12,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import br.org.cesar.common.Selenium;
+import common.Selenium;
 
 /**
- * Classe com mÈtodos de apoio, que otimizam a codificaÁ„o das classes de p·gina.
+ * Classe com m√©todos de apoio, que otimizam a codifica√ß√£o das classes de p√°gina.
  * @author jcan
  *
  */
@@ -30,7 +30,7 @@ public abstract class Utils {
 	}
 
 	/**
-	 * MÈtodo para verificar a visibilidade de um elemento utilizando o locator
+	 * M√©todo para verificar a visibilidade de um elemento utilizando o locator
 	 * @param locator
 	 */
 	public static void isVisible(By locator) {
@@ -38,7 +38,7 @@ public abstract class Utils {
 	}
 	
 	/**
-	 * MÈtodo para verificar a visibilidade de um elemento utilizando o ID
+	 * M√©todo para verificar a visibilidade de um elemento utilizando o ID
 	 * @param id
 	 */
 	public static void isVisible(String id) {
@@ -46,7 +46,7 @@ public abstract class Utils {
 	}
 	
 	/**
-	 * MÈtodo para verificar a presenÁa de um elemento utilizando o locator
+	 * M√©todo para verificar a presen√ßa de um elemento utilizando o locator
 	 * @param locator
 	 */
 	public static void isLocated(By locator) {
@@ -54,7 +54,7 @@ public abstract class Utils {
 	}
 	
 	/**
-	 * MÈtodo para verificar a presenÁa de um elemento utilizando o ID
+	 * √©ÔøΩtodo para verificar a presen√ßa de um elemento utilizando o ID
 	 * @param id
 	 */
 	public static void isLocated(String id) {
@@ -62,7 +62,7 @@ public abstract class Utils {
 	}
 	
 	/**
-	 * MÈtodo para verificar se um elemento È clic·vel utilizando o locator
+	 * M√©todo para verificar se um elemento √© clic√°vel utilizando o locator
 	 * @param locator
 	 */
 	public static void isClickable(By locator) {
@@ -70,7 +70,7 @@ public abstract class Utils {
 	}
 	
 	/**
-	 * MÈtodo para verificar se um elemento È clic·vel utilizando o ID
+	 * M√©todo para verificar se um elemento √© clic√°vel utilizando o ID
 	 * @param id
 	 */
 	public static void isClickable(String id) {
@@ -79,7 +79,7 @@ public abstract class Utils {
 	
 	
 	/**
-	 * MÈtodo para capturar screenshot
+	 * M√©todo para capturar screenshot
 	 * @param fileName - Nome do arquivo
 	 */
 	public static void takeScreenshot(String fileName){
